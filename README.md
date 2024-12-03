@@ -1,4 +1,4 @@
-                                                #  Avoiding `Optional` in Java/Kotlin #
+                                        #  Avoiding `Optional` in Java/Kotlin #
 
 ## **Introduction**
 Java pacakge `java.util.Optional` was introduced in Java 8 to address issues related to `null` values. While its intent was to reduce `NullPointerException` and make code safer, its design and implementation have several critical flaws that make it a less ideal solution for "modern software" development.
@@ -415,6 +415,7 @@ Choose what you think is better; however, personally, I hate it...**
 **This Represents the Minority That Reveals the True Nature of the Optional Concept in java.util.**
 
 **Finally, Here's a Dose of Bad Practices with Optional That You Should Avoid If You Plan to Use It.**
+[Optional::BadPractices](https://github.com/noyzys/avoid-optional/blob/main/OptionalBadPractices.java)
 
 **I Base This on My Skills, Knowledge, and Experience in English.
 If I’ve made any linguistic mistakes — my apologies. Additionally, I’d like to note that I’m not a programmer by profession.**

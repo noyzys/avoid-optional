@@ -14,8 +14,8 @@ This document explores the problems with Monad `Optional`, identifies where its 
 - mistake `java.util.Optional` Java standard API.
 
 # Monad 
-**A structure in functional programming that represents computations as sequences of steps. A Monad consists/wrapper of:
-- A unit constructor (unit or of): Wraps a value into a monad.**
+**A structure in functional programming that represents computations as sequences of steps. A Monad consists/wrapper of:**
+- **A unit constructor (unit or of): Wraps a value into a monad.**
 - **Example: function/method bind or flatMap (fmap): Allows combining operations on values wrapped in a monad.**
 - A monad adheres to the laws of associativity and identity.
 - In Java Optional is a simplified form of a monad, but it does not meet all the requirements (lacking support for the identity function)
@@ -252,7 +252,7 @@ Optional<String> result = opt.flatMap(s -> Optional.ofNullable(s.toUpperCase()))
 
 
 ```java
-Optional<String> opt = Optional.of("Hello");
+Optional<String> opt = Optional.of("Avoid");
 
 // The default value ("default_value") is evaluated even though the Optional is not empty
 String value = opt.orElse(computeDefaultValue());
@@ -299,7 +299,7 @@ String computeDefault() {
 - **stream() method returns a Stream containing the value inside the Optional if present, or an empty Stream if the Optional is empty. This method allows Optional to be seamlessly integrated into Java's Stream API, enabling you to chain further stream operations.**
 
 ```java
-Optional<String> opt = Optional.of("Hello");
+Optional<String> opt = Optional.of("Avoid");
 
 // Converts the Optional into a Stream containing the value
 Stream<String> stream = opt.stream();
@@ -339,8 +339,8 @@ boolean isEmpty = opt.isEmpty();  // Returns true
 - **get() method in the Optional class returns the value contained within the Optional if it is present. If the Optional is empty (i.e., does not contain a value), it throws a NoSuchElementException.**
 
 ```java
-Optional<String> optional = Optional.of("Hello");
-String value = optional.get();  // Returns "Hello"
+Optional<String> optional = Optional.of("Avoid");
+String value = optional.get();  // Returns "Avoid"
 
 Optional<String> emptyOptional = Optional.empty();
 String emptyValue = emptyOptional.get();  // Throws NoSuchElementException

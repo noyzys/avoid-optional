@@ -1,7 +1,7 @@
                                         #  Avoiding `Optional` in Java/Kotlin #
 
 ## **Introduction**
-Java pacakge `java.util.Optional` was introduced in Java 8 to address issues related to `null` values. While its intent was to reduce `NullPointerException` and make code safer, its design and implementation have several critical flaws that make it a less ideal solution for "modern software" development.
+Java package `java.util.Optional` was introduced in Java 8 to address issues related to `null` values. While its intent was to reduce `NullPointerException` and make code safer, its design and implementation have several critical flaws that make it a less ideal solution for "modern software" development.
 **Optional in Java 8+ was meant to solve issues related to null, but its implementation in java.util has significant shortcomings. Optional is considered suboptimal in many cases.**
 
 This document explores the problems with Monad `Optional`, identifies where its use can cause issues, and suggests alternatives.
@@ -325,7 +325,7 @@ Optional<String> emptyOpt = Optional.empty();
 
 
 #### 12. Optional#isEmpty() (Java 11+)
--- **sEmpty() method returns true if the Optional is empty (i.e., it contains no value). It is the opposite of the isPresent() method, which checks if the Optional contains a value.**
+-- **sEmpty() method returns true if the Optional is empty (contains no value). It is the opposite of the isPresent() method, which checks if the Optional contains a value.**
 
 ```java
 Optional<String> opt = Optional.empty();
